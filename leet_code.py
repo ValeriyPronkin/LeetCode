@@ -60,3 +60,16 @@ def containsDuplicate(nums):
                 res = True
                 print (nums[i-k])
     return res
+
+# 5 Single Number
+# Учитывая непустой массив целых чисел, каждый элемент появляется дважды, кроме одного. Найдите этот единственный.
+# Примечание:
+# Ваш алгоритм должен иметь линейную сложность во время выполнения. Не могли бы вы реализовать это без использования дополнительной памяти?
+# Пример 1: Input: [2,2,1] Output: 1
+# Input: [4,1,2,1,2] Output: 4
+def singlenumber(nums):
+    for i in range(len(nums)):
+        if (nums[i] not in nums[0:i]) & (nums[i] not in nums[i+1:]):
+            break
+    return nums[i]
+
