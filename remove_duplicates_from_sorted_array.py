@@ -7,7 +7,8 @@ from loguru import logger
 """
 
 NAME : Remove Duplicates from Sorted Array
-LINK : https://leetcode.com/explore/featured/card/top-interview-questions-easy/92/array/727/
+LINK :
+https://leetcode.com/explore/featured/card/top-interview-questions-easy/92/array/727/
 
 DESC:
 
@@ -43,14 +44,6 @@ def remove_duplicates_from_sorted_array(nums: List[int]) -> List[int]:
 
 
 if __name__ == "__main__":
-    """
-    if call:
-    python -m doctest -v remove_duplicates_from_sorted_array.py
-    – will run doctest
-    """
-    import doctest
-    doctest.testmod()
-
     parser = argparse.ArgumentParser()
     parser.add_argument('-n', '--nums', nargs='+',
                         help='List of sorted values',
