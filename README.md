@@ -15,3 +15,9 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+# TESTS
+
+```bash
+python -m doctest -v learn_argparse.py
+```
+
