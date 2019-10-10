@@ -14,6 +14,26 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 ```
+### First way
+
+```bash
+
+python learn_argparse.py --num1 10 --num2 2000
+
+```
+### Second way
+```python
+
+from learn_argparse import sum_all_nums
+
+
+sum_all_nums(10, 2000)
+
+"""
+20000
+"""
+
+```
 
 # TESTS
 
