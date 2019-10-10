@@ -1,5 +1,6 @@
 from loguru import logger
 from typing import List
+import argparse
 
 """
 DESC:
@@ -22,4 +23,16 @@ def sum_all_nums(num1: int, num2: int):
 
 
 if __name__ == "__main__":
-    pass
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--num1', type=int,
+                        help='First num for miltiplication',
+                        required=True)
+    parser.add_argument('--num2', type=int,
+                        help='Second num for miltiplication',
+                        required=True)
+    args = parser.parse_args()
+
+    num1 = args.num1
+    num2 = args.num2
+
+    print('Result :', sum_all_nums(num1, num2))
