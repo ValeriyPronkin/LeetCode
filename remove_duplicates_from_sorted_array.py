@@ -1,6 +1,5 @@
 from typing import List
 import argparse
-
 from loguru import logger
 
 
@@ -21,8 +20,9 @@ the input array in-place with O(1) extra memory.
 """
 
 
-def remove_duplicates_from_sorted_array(nums: List[int]) -> List[int]:
+def remove_duplicates_from_sorted_array(nums: List[int]) -> int:
     """
+    DOCTEST
     >>> nums = [1, 1, 2]
     >>> remove_duplicates_from_sorted_array(nums)
     2
@@ -39,13 +39,14 @@ def remove_duplicates_from_sorted_array(nums: List[int]) -> List[int]:
     j = 0
     for i in range(len(nums)):
         if (nums[i-1] != nums[i]) or (i == 0):
+            nums[j] = nums[i]
             j += 1
     return j
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('-n', '--nums', nargs='+',
+    parser.add_argument('--nums', nargs='+',
                         help='List of sorted values',
                         required=True)
     nums = parser.parse_args().nums
