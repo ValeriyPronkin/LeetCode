@@ -26,13 +26,13 @@ def remove_duplicates_from_sorted_array(nums: List[int]) -> int:
     >>> nums = [1, 1, 2]
     >>> remove_duplicates_from_sorted_array(nums)
     2
-    >>> nums == [1, 2]
+    >>> nums[:2] == [1, 2]
     True
 
     >>> nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
     >>> remove_duplicates_from_sorted_array(nums)
     5
-    >>> nums == [0, 1, 2, 3, 4]
+    >>> nums[:5] == [0, 1, 2, 3, 4]
     True
     """
 
